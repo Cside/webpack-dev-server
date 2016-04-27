@@ -6,7 +6,7 @@ var scriptHost;
 Array.prototype.slice.apply(scriptElements).reverse().forEach(function (scriptElement) {
   if (scriptHost) {
     return;
-  } else if (scriptElement.getAttribute("src")) {
+  } else if (scriptElement.hasAttribute("src")) {
     var src = scriptElement.getAttribute("src");
     scriptHost = src.replace(/\/[^\/]+$/, "");
   }
